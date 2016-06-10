@@ -1,0 +1,5 @@
+One half in the value of eta_l,b is accounted
+This one half comes from the factor of 2 which appears if one starts with a dim 5 operator
+in the lagrangian and writes dispersion relations : they will have 2*eta.
+We wrote just eta in the disp relations, and hence need to divide by two this value in order
+to get the "lagrangian" eta

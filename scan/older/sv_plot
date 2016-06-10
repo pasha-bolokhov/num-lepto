@@ -1,0 +1,9 @@
+#
+if [ $# -lt 1 ]; then
+  echo "specify target directory" 2>&1
+  exit 1
+fi
+
+ cp -i asymm.dat asymm_y.dat asymm.ps asymm_y.ps asymm_bau.ps asymm_ups.ps "$@"
+
+

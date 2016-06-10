@@ -1,0 +1,32 @@
+gnuplot /dev/stdin  << EOF
+            set autoscale
+            set terminal postscript landscape
+            set key top left box lw 2
+            set label 1 "hostname = 'hpplus01'" at graph 0.5,0.87 font "Helvetica,10"
+            set label 2 "rundate = 'Mon Jul 23 13:49:43 2001'" at graph 0.5,0.842 font "Helvetic
+a,10"
+            set label 3 "events = '100'" at graph 0.5,0.814 font "Helvetica,10"
+            set label 4 "energy = '5999.99'" at graph 0.5,0.786 font "Helvetica,10"
+            set label 5 "frame = 'CMS'" at graph 0.5,0.758 font "Helvetica,10"
+            set label 6 "projectile = 'A'" at graph 0.5,0.73 font "Helvetica,10"
+            set label 7 "target = 'A'" at graph 0.5,0.702 font "Helvetica,10"
+            set label 8 "Aproj = '207'" at graph 0.5,0.674 font "Helvetica,10"
+            set label 9 "Zproj = '82'" at graph 0.5,0.646 font "Helvetica,10"
+            set label 10 "Atarg = '207'" at graph 0.5,0.618 font "Helvetica,10"
+            set label 11 "Ztarg = '82'" at graph 0.5,0.59 font "Helvetica,10"
+            set label 12 "ynum = '50'" at graph 0.5,0.562 font "Helvetica,10"
+            set label 13 "ptnum = '50'" at graph 0.5,0.534 font "Helvetica,10"
+            set label 14 "ymin = '-4.0'" at graph 0.5,0.506 font "Helvetica,10"
+            set label 15 "ymax = '4.0'" at graph 0.5,0.478 font "Helvetica,10"
+            set label 16 "ptmin = '.0'" at graph 0.5,0.45 font "Helvetica,10"
+            set label 17 "ptmax = '1.5'" at graph 0.5,0.422 font "Helvetica,10"
+            set label 18 "bmin = '.0'" at graph 0.5,0.394 font "Helvetica,10"
+            set label 19 "bmax = '.0'" at graph 0.5,0.366 font "Helvetica,10"
+            set label 20 "NRUN = '82'" at graph 0.5,0.338 font "Helvetica,10"
+            set label 21 "NSEED = '0'" at graph 0.5,0.31 font "Helvetica,10"
+            set label 22 "y_back = '-4 .. -2'" at graph 0.5,0.282 font "Helvetica,10"
+            set label 23 "y_forw = '2 .. 4'" at graph 0.5,0.254 font "Helvetica,10"
+            set label 24 "accstep = '10'" at graph 0.5,0.226 font "Helvetica,10"
+            set xlabel 'pt in GeV'
+            set ylabel 'N(pt) - total number of particles with given pt'
+            plot '-' using " pt = %lf, num = %lf" title 'pt-distribution'

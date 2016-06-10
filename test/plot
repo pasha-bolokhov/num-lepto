@@ -1,0 +1,9 @@
+#
+
+
+ gnuplot << EOF > test.ps
+   set terminal postscript color
+   set xlabel "10-log (T)"
+   set ylabel "Y_B"
+   plot "1.dat" using 1:3 smooth csplines title "1.0", "0.7.dat" using 1:3 smooth csplines title "0.7", "0.4.dat" using 1:3 smooth csplines title "0.4", "0.1.dat" using 1:3 smooth csplines title "0.1", "0.dat" using 1:3 smooth csplines title "0.0"
+EOF
